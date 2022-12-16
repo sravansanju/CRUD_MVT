@@ -25,7 +25,7 @@ def display_webpages(request):
     #LWO=Webpage.objects.all()
     #LWO=Webpage.objects.filter(Q(topic_name='football') & Q(name__startswith='r'))
     #LWO=Webpage.objects.all()
-    LWO=Webpage.objects.filter(Q(topic_name='Foot Ball') | Q(url__endswith='com'))
+    #LWO=Webpage.objects.filter(Q(topic_name='Foot Ball') | Q(url__endswith='com'))
     d={'LWO':LWO}
     return render(request,'display_webpages.html',d)
 def display_access(request):
@@ -37,8 +37,4 @@ def display_access(request):
     #LAO=AccessRecords.objects.filter(date__day='14')    
     #LAO=AccessRecords.objects.filter(date__lte='2021-8-13')
     d={'LAO':LAO}
-    return render(equest,'display_access.html',d)
-def update_webpages(request):
-    webpages.objects.filter(topic_name='')
-
-    return render(request,'update_webpages',d)
+    return render(request,'display_access.html',d)
